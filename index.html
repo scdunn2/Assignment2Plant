@@ -1,0 +1,55 @@
+<html>
+  <head>
+  <meta charset="UTF-8">
+  <title>Assignment 2 - Plant Site</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Carter+One&family=Lato&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="js/slick.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="css/slick-theme.css"/>
+  </head>
+
+  <body>
+<h1>Learn about my plants!</h1>
+  <!-- HTML -->
+  <div id="box">
+<div class="plants">
+   <div><img src="assets/pothos.jpg"></div>
+   <div><img src="assets/pink.jpeg"></div>
+   <div><img src="assets/rubber.jpg"></div>
+</div>
+</div>
+
+<h2> Click on the plant names below to see more information </h2>
+<div class="learn">
+  <h3>Pothos</h3>
+  <p>Pothos is arguably the easiest of all houseplants to grow, even if you are a person who forgets to water your plants. This trailing vine has pointed, heart-shaped green leaves, sometimes variegated with white, yellow, or pale green. While pothos likes bright, indirect light it can thrive in areas that don’t get a lot of sunlight or have only fluorescent lighting.1
+It's an excellent plant for locations such as offices and dorm rooms.(thespuce.com)</p>
+  <h3>Echeveria Subsessilis Rose</h3>
+  <p>Echeveria Subsessilis is a gorgeous succulent with rosettes up to 6 inches (15 cm) in diameter, Bluish green leaves form beautiful rosettes with a tinge of pink along the leaf margins. A thick farina coating on the leaves give the plant a soft powdery look and allows the plant to tolerate full sun. (succulentsbox.com)</p>
+  <h3>Baby Rubber Plant</h3>
+  <p>Peperomia obtusifolia, the baby rubberplant or pepper face, is a species of flowering plant in the family Piperaceae, native to Florida, Mexico and the Caribbean. The specific epithet obtusifolia means "blunt-leaved". The plant has gained the Royal Horticultural Society's Award of Garden Merit. (wikipedia.org)</p>
+</div>
+  <!-- Script at page bottom -->
+  <script>
+       $('.plants').slick();
+
+       $(document).ready(function(){
+  $(".learn p").hide();
+  $(".learn h3").click(function(){
+    $(this).next("p").slideToggle("slow")
+     .siblings("p:visible").slideUp("slow");
+    $(this).toggleClass("active");
+    $(this).siblings("h3").removeClass("active");
+  });
+});
+  </script>
+
+      <!-- $ means use jquery -->
+<footer> Made by Shannon Dunn - Spring 2021</footer>
+    </body>
+    </html>
